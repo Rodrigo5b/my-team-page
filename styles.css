@@ -34,26 +34,30 @@ h2{
 
 .main{
     width: 100%;
-    display: flex;
+    display: grid;
     padding: 1.25rem;
-    flex-wrap: wrap;
     justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
 }
 .article{
     display: flex;
     margin-bottom: 3rem;
 }
-.article p{
-    font-family: 'PT Serif', serif;
-    writing-mode: vertical-lr;
-    font-size: 0.625rem;
-    flex: auto;
-}
 
 .box{
     display: flex;
     flex-direction: column;
+    flex: 5;
+    flex-shrink: 1;
 }
+.article p{
+    font-family: 'PT Serif', serif;
+    writing-mode: vertical-lr;
+    font-size: 0.625rem;
+    flex: 1;
+    flex-shrink: 2;
+}
+
 .box b{
     font-family: 'Poppins', sans-serif
 }
@@ -62,7 +66,7 @@ h2{
     margin-top: 3rem;
 }
 img{
-    height: 25vh;
+    width: 100%;
 }
 
 .footer{
@@ -83,15 +87,19 @@ img{
     .medio-up{
         margin-top: 3rem;
     }
-    .article{
-    }
     .header{
-        max-width: 750px;
+        max-width: 1000px;
         margin: auto;
     }
     .main{
-        max-width: 750px;
+        max-width: 1000px;
         margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main{
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 }
 
